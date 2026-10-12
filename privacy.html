@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Qwen38 Training Storage 的 Google Drive 数据访问、保存和授权撤销说明。">
+<title>隐私政策 · Qwen38 Training Storage</title>
+<style>body{font:18px/1.8 system-ui,sans-serif;max-width:760px;margin:48px auto;padding:0 24px;color:#233047;background:#f8fafc}a{color:#1457a5}h1,h2{line-height:1.3}small{color:#526277}main{background:white;padding:32px;border:1px solid #dbe3ee;border-radius:12px}@media(max-width:600px){body{margin:20px auto}main{padding:20px}}</style>
+<main>
+<p><a href="index.html">返回应用首页</a></p>
+<h1>隐私政策</h1>
+<p>本政策适用于个人自用文件传输工具 Qwen38 Training Storage，生效日期为 2026 年 10 月 12 日。工具由账号持有人管理，仅供其本人使用。</p>
+<h2>访问哪些数据</h2>
+<p>工具经账号持有人授权访问 Google Drive 文件内容及必要元数据，包括文件名称、大小和文件标识，用于保存、恢复与校验其指定的训练文件。Google 的 Drive 读写权限覆盖整个 Drive，程序固定在本次任务的专用文件夹中操作，不主动扫描其他文件夹。</p>
+<h2>如何使用数据</h2>
+<p>文件内容仅用于账号持有人要求的传输、备份、恢复和完整性校验。运行记录保留文件名称、大小、SHA-256、时间、运行时身份和成功或失败状态。本存储工具不执行模型训练；相关训练由账号持有人在其另行授权的训练流程中管理。工具不出售数据、不用于广告，也不将数据提供给第三方用于通用模型训练。</p>
+<h2>保存位置与访问者</h2>
+<p>文件保存在账号持有人的 Google Drive、本机及其授权的 Google Colab 运行时中。Google 按其服务政策处理这些服务上的数据。rclone 是在这些环境中执行的传输程序，不把文件发送到 rclone 运营方的服务器。</p>
+<p>OAuth 客户端凭据和可续期授权保存在本机受限目录及账号持有人指定的 Colab Secret 中；临时运行时配置使用受限文件权限。凭据不进入公开网站、源代码仓库、训练归档或日志。只有账号持有人及其明确授权的运行环境可以使用这些凭据。</p>
+<h2>保存期限与撤销</h2>
+<p>训练存档及校验记录保留到账号持有人自行删除。临时运行时文件会随运行时释放而消失；本机和 Drive 中的副本不会因此自动删除。账号持有人可在 <a href="https://myaccount.google.com/connections">Google 账号的第三方连接设置</a>中撤销本工具的授权，并删除本机凭据及 Colab Secret。撤销授权会停止后续访问，不会自动删除已经保存的文件。</p>
+<h2>Google API 数据政策</h2>
+<p>Qwen38 Training Storage 对从 Google API 接收的信息的使用和向其他应用的转移将遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>，包括其中的 Limited Use 要求。</p>
+<h2>本说明网站</h2>
+<p>本网站仅提供静态应用说明和隐私政策，不接收训练文件或授权凭据，不设置分析脚本或登录表单。静态托管服务可能根据其自身政策记录常规访问日志。</p>
+<h2>联系与更新</h2>
+<p>如需撤销访问、删除数据或询问本政策，请联系 <a href="mailto:lzbgod168@gmail.com">lzbgod168@gmail.com</a>。如工具的数据处理方式发生变化，本页面会更新生效日期和相关说明。</p>
+</main>
+</html>
