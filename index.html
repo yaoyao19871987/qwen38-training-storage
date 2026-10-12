@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Qwen38 Training Storage：账号持有人自用的训练文件存储与校验工具。">
+<title>Qwen38 Training Storage</title>
+<style>body{font:18px/1.8 system-ui,sans-serif;max-width:760px;margin:48px auto;padding:0 24px;color:#233047;background:#f8fafc}a{color:#1457a5}h1,h2{line-height:1.3}small{color:#526277}main{background:white;padding:32px;border:1px solid #dbe3ee;border-radius:12px}@media(max-width:600px){body{margin:20px auto}main{padding:20px}}</style>
+<main>
+<h1>Qwen38 Training Storage</h1>
+<p>这是 Google 账号持有人自用的文件传输工具，用于在自己的 Google Drive、本机和自己授权的 Google Colab 运行时之间保存、恢复及校验训练检查点、运行日志和结果文件。它不向公众提供注册或文件托管服务。</p>
+<h2>工具如何工作</h2>
+<p>工具通过 Google Drive API 和 rclone 传输文件，使用 SHA-256 校验文件完整性，并记录独立运行时的读回回执。首次授权之后，工具使用受保护的可续期凭据访问 Drive，避免在每次更换运行时后重新进行 DriveFS 挂载授权。</p>
+<h2>请求的权限</h2>
+<p>工具请求 Google Drive 读写权限，以访问账号持有人此前保存的文件。Google 提供的这一权限可访问整个 Drive；工具自身固定到本次任务的专用文件夹。这是程序限制，不是 Google 提供的文件夹级权限。</p>
+<p>凭据保存在账号持有人本机的受限目录，以及其明确授权的 Colab Secret 中。凭据不写入训练代码、运行输出、检查点归档或本网站。</p>
+<p><a href="privacy.html">阅读隐私政策</a>，了解数据访问、用途、保存及撤销授权的方法。</p>
+<p>联系邮箱：<a href="mailto:lzbgod168@gmail.com">lzbgod168@gmail.com</a></p>
+<small>个人自用工具说明 · 更新于 2026 年 10 月 12 日</small>
+</main>
+</html>
